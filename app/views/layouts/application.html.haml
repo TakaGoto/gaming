@@ -9,32 +9,9 @@
 
 - if user_signed_in?
   %body
-    .navbar.navbar-fixed-top
-      .navbar-inner
-        .container
-          %a.btn.btn-navbar
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand{:href => "#"} TERROR Gaming
-
-    .container-fluid
-      .row
-        .span9
-          = yield
-        .span3
-          %h2 About Us
-          Lorem ipsum
+  = render 'home/user_home_page'
 - else
-  .container-fluid
-    .landing-logo
-      .logo
-        %img{:src => "/assets/terror_logo.png"}
-        %img{:src => "/assets/terror_text.png"}
-        %img{:src => "/assets/gaming_text.png"}
-      .hero-unit
-        %h1 TERROR Gaming
-        %p Blah blahBlah blahBlah blahBlah blahBlah blahBlah blahBlah blah
+  = render 'home/landing_page'
 
 
 
