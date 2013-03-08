@@ -1,0 +1,42 @@
+:javascript
+  $(document).ready(function() {
+  $("#jcountdown").setCountdown({
+    targetDate: '2013-03-23',
+      itemLabels: [ 'Days', 'Hours', 'Minutes', 'Seconds' ]});});
+
+  (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=114012978768697";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+
+  !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+.container-fluid
+  .landing-logo
+    .logo
+      %img{:src => "/assets/terror_logo.png"}
+      %img{:src => "/assets/terror_text.png"}
+      %img{:src => "/assets/gaming_text.png"}
+    .row-fluid
+      .hero-unit
+        %h2 Coming Soon
+        %h5 Website dedicated to the Chicago Gaming Community.  Articles by high level players, summary of tournaments in Chicago, Event notifications and more.
+        #jcountdown
+      #social.hero-unit
+        %p Meanwhile, sign up
+        .social-login
+          %li= link_to "sign in with Facebook", signin_facebook_path, {:class => "btn-auth btn-facebook"}
+      #social-like.hero-unit
+        %p join our social networks
+        .social-like
+          %li
+            %a.twitter-follow-button{"data-show-count" => "false", "data-size" => "large",
+                                     :href => "https://twitter.com/terrorgamingnet"} follow @terrorgamingnet
+        %div
+          %li.fb-like{"data-href" => "https://www.facebook.com/pages/terrorgamingnet/466177123433323?fref=ts",
+                      "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false",
+                      "data-width" => "450"}
+

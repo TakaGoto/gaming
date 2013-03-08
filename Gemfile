@@ -32,8 +32,8 @@ gem 'jcountdown-rails', :git => 'http://github.com/rezwyi/jcountdown-rails.git'
 gem 'jquery-rails'
 gem 'haml'
 gem 'omniauth'
-gem 'omniauth-google-oauth2'
 gem 'omniauth-facebook'
+gem 'redis'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

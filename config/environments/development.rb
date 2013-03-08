@@ -9,6 +9,8 @@ Gaming::Application.configure do
   # Log error messages when you accidentally call methods on nil.
   config.whiny_nils = true
 
+  ENV['REDISTOGO_URL'] = "redis://redistogo:d0c23eb5c58b4479b3a5d22cfbc222ad@dory.redistogo.com:10587/"
+
   # Show full error reports and disable caching
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
