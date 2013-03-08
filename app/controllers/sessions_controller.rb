@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     user = User.where(:provider => auth['provider'],
                       :uid => auth['uid']).first || User.create_with_omniauth(auth)
     session[:user_id] = user.id
-    redirect_to root_url, :notice => "Signed in!"
+    redirect_to root_url, :notice => "Thanks for Signing up!"
   end
 
   def destroy
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
   end
 
   def new
-    redirect_to '/auth/google_oauth2'
+    redirect_to '/auth/facebook'
   end
 
   def failure

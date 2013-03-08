@@ -1,6 +1,3 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :google_oauth2,
-           '591777256334-841dibubll88njllc7d0s8c656hphp7c.apps.googleusercontent.com',
-           'JpRWG5XpyvUNjjSPgJoBNmQq',
-           {access_type: 'online', approval_prompt: ''}
+  provider :facebook, '405871032842473', '860e9488ebc9aae395e28754c5d177b7'
 end

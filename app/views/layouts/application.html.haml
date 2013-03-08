@@ -7,11 +7,9 @@
     = csrf_meta_tags
     %meta{"initial-scale" => "1.0", :name => "viewport content", :width => "device-width,"}
 
-- if user_signed_in?
   %body
-  = render 'home/user_home_page'
-- else
   = render 'home/landing_page'
+
 
 
 

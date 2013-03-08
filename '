@@ -21,18 +21,15 @@
       %img{:src => "/assets/terror_text.png"}
       %img{:src => "/assets/gaming_text.png"}
     .row-fluid
-      - if flash[:notice]
-        .alert.alert-success
-          = flash[:notice]
       .hero-unit
-        %h1 Coming Soon
-        %p Website dedicated to the Chicago Gaming Community.  Articles by high level players, summary of tournaments in Chicago, and more to come.
+        %h2 Coming Soon
+        %h5 Website dedicated to the Chicago Gaming Community.  Articles by high level players, summary of tournaments in Chicago, Event notifications and more.
         #jcountdown
       #social.hero-unit
         %p Meanwhile, sign up
         .social-login
           %li= link_to "sign in with Facebook", signin_facebook_path, {:class => "btn-auth btn-facebook"}
-      #social-likes.hero-unit
+      #social-like.hero-unit
         %p join our social networks
         .social-like
           %li

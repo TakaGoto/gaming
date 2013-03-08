@@ -2,8 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.social-network{
-  width:75%;
+.alert.alert-success{
+}
+
+.row-fluid{
+  width:50%;
+  margin:0 auto;
+}
+
+#social, #social-likes{
+  width:33%;
+  margin-top:25px;
+  min-width:200px;
+}
+
+#social-likes{
+  margin-bottom:200px;
 }
 
 .fb-like{
@@ -19,6 +33,7 @@ li{
   display:inline;
   list-style-type:none;
 }
+
 body {
   background: url('/assets/dark_texture.png');
 }
@@ -27,18 +42,12 @@ body {
   font-size: 2.5em;
 }
 
-#social{
-  margin-top:50px;
-}
-
 .hero-unit{
   padding:20px;
   text-align:center;
-  width:50%;
+  width:75%;
   margin: 0 auto;
   background:rgb(116, 48, 48);
-  h2{
-  }
 }
 
 .logo {
