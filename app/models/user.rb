@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   attr_protected :email, :name, :provider, :uid
 
+  has_many :blogs
+
   def self.create_with_omniauth(auth)
     create! do |user|
       user.provider = auth['provider']
