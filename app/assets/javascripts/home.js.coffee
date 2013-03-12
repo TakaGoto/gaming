@@ -21,3 +21,8 @@ not ((d, s, id) ->
     js.src = "//platform.twitter.com/widgets.js"
     fjs.parentNode.insertBefore js, fjs
 ) document, "script", "twitter-wjs"
+
+$(document).ready ->
+  $("#jcountdown").setCountdown
+    targetDate: "2013-04-13"
+    itemLabels: ["Days", "Hours", "Minutes", "Seconds"]
