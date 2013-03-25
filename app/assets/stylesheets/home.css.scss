@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.alert.alert-success{
-}
 
 .row-fluid{
   width:50%;
@@ -11,7 +9,7 @@
 }
 
 #social, #social-likes{
-  width:33%;
+  width:75%;
   margin-top:25px;
   min-width:200px;
 }
@@ -35,7 +33,7 @@ li{
 }
 
 body {
-  background: url('/assets/dark_texture.png');
+  background: url('/assets/fabric_plaid.png');
 }
 
 #jcountdown{
@@ -48,7 +46,7 @@ body {
   text-align:center;
   width:75%;
   margin: 0 auto;
-  background:rgb(116, 48, 48);
+  background:rgb(236, 197, 197);
 }
 
 .logo {
