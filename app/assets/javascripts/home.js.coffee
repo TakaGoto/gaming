@@ -22,7 +22,7 @@ not ((d, s, id) ->
     fjs.parentNode.insertBefore js, fjs
 ) document, "script", "twitter-wjs"
 
-$(document).ready ->
-  $("#jcountdown").setCountdown
-    targetDate: "2013-04-25"
-    itemLabels: ["Days", "Hours", "Minutes", "Seconds"]
+#$(document).ready ->
+#  $("#jcountdown").setCountdown
+#    targetDate: "2013-04-25"
+#    itemLabels: ["Days", "Hours", "Minutes", "Seconds"]

@@ -12,9 +12,6 @@
   width:75%;
   margin-top:25px;
   min-width:200px;
-  li{
-    list-style-type:none;
-  }
 }
 
 #social-likes{
@@ -45,6 +42,9 @@ body {
   width:75%;
   margin: 0 auto;
   background:white;
+  li{
+    list-style-type:none;
+  }
 }
 
 .logo {
