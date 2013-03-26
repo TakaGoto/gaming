@@ -5,6 +5,14 @@ class ApplicationController < ActionController::Base
   helper_method :user_signed_in?
   helper_method :correct_user?
 
+  before_filter :check_url
+
+  def check_url
+    if request.host == "enigmatic-taiga-1462.herokuapp.com" then
+      redirect_to request.protocal + "www.terrorgaming.net" + request.fullpath
+    end
+  end
+
   private
     def current_user
       @current_user ||= User.find(session[:user_id]) if session[:user_id]
