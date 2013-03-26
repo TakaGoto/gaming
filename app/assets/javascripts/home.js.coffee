@@ -24,5 +24,5 @@ not ((d, s, id) ->
 
 $(document).ready ->
   $("#jcountdown").setCountdown
-    targetDate: "2013-04-13"
+    targetDate: "2013-04-25"
     itemLabels: ["Days", "Hours", "Minutes", "Seconds"]

@@ -12,6 +12,9 @@
   width:75%;
   margin-top:25px;
   min-width:200px;
+  li{
+    list-style-type:none;
+  }
 }
 
 #social-likes{
@@ -25,11 +28,6 @@
 .twitter-follow-button{
   padding-top:10px;
   text-align:center;
-}
-
-li{
-  display:inline;
-  list-style-type:none;
 }
 
 body {
@@ -46,7 +44,7 @@ body {
   text-align:center;
   width:75%;
   margin: 0 auto;
-  background:rgb(236, 197, 197);
+  background:white;
 }
 
 .logo {
