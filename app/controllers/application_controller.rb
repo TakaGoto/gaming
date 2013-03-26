@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def check_url
     if request.host == "enigmatic-taiga-1462.herokuapp.com" then
-      redirect_to request.protocal + "www.terrorgaming.net" + request.fullpath
+      redirect_to request.protocol + "www.terrorgaming.net" + request.fullpath
     end
   end
 
