@@ -12,11 +12,13 @@
         %h2 Coming Soon
         %p Website dedicated to the Chicago Gaming Community.  Sign up and learn more about the website.
         .social-login
-          %li= link_to "sign in with Facebook", signin_facebook_path, {:class => "btn-auth btn-facebook"}
+          - if !user_signed_in?
+            %li= link_to image_tag("/assets/facebook_btn.png"), signin_facebook_path
         %p Join us in our social networks.
         .social-like
           %li
-            %a.twitter-follow-button{"data-show-count" => "false", "data-size" => "large",
+            %a.twitter-follow-button{"data-show-count" => "false",
+                                     "data-size" => "large",
                                      :href => "https://twitter.com/terrorgamingnet"} follow @terrorgamingnet
         %div
           %li.fb-like{"data-href" => "https://www.facebook.com/pages/terrorgamingnet/466177123433323?fref=ts",

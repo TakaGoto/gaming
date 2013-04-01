@@ -12,3 +12,7 @@
  *= require jcountdown
  *= require_tree .
  */
+
+.red-navbar{
+  color:rgb(199, 47, 47);
+}
