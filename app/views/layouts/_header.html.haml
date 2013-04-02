@@ -4,8 +4,6 @@
       %a.red-navbar{:href => root_url} Home
     %li
       %a.red-navbar{:href => about_path} About us
-    %li
-      %a.red-navbar{:href => "/contact-us"} Contact us
     %li.nav.pull-right
       - if user_signed_in?
         %a.red-navbar{:href => signout_path} Sign out

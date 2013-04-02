@@ -39,5 +39,3 @@ gem 'redis'
 gem 'unicorn'
 gem 'newrelic_rpm'
 
-gem 'contact_us'
-
