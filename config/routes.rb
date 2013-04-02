@@ -10,4 +10,7 @@ Gaming::Application.routes.draw do
   match '/signin' => 'sessions#new', :as => :signin_facebook
 
   get '/blog' => 'blogs#index', :as => :blog
+
+  match '/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/contact' => 'contact#create', :as => 'contact', :via => :post
 end
