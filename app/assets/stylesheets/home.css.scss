@@ -1,20 +1,18 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
-.row-fluid{
-  width:50%;
-  margin:0 auto;
+.twitch-logo{
+  img{
+    padding-top:10px;
+  }
 }
 
-#social, #social-likes{
-  width:75%;
-  margin-top:25px;
-  min-width:200px;
+#blog-feature, #chat-feature, #player_of_month{
+  padding-top:50px;
 }
 
-#social-likes{
-  margin-bottom:200px;
+#player_of_month{
+  padding-bottom:50px;
 }
 
 .fb-like{
@@ -28,10 +26,6 @@
 
 body {
   background: url('/assets/fabric_plaid.png');
-}
-
-#jcountdown{
-  font-size: 2.5em;
 }
 
 .hero-unit{

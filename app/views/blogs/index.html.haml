@@ -1,1 +1,8 @@
-%h1 this is blog index
+.span8#blogs-index
+  - @blogs.each do |blog|
+    = blog.title
+    = blog.content
+    = blog.summary
+    = blog.banner_image
+.span4
+  %p sponsors/affiliates

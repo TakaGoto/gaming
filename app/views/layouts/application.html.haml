@@ -9,8 +9,10 @@
 
 
   %body
-    = render 'layouts/header'
-    = yield
+    .container
+      = render 'layouts/header'
+      = yield
+      = render 'layouts/footer'
 
 
 
