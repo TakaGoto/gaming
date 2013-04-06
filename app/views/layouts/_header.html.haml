@@ -1,18 +1,11 @@
-.navbar.navbar-inverse.navbar-fixed-top
+.navbar.navbar-fixed-top
   .navbar-inner
     .container
-      %ul.nav.pull-right
-        - if user_signed_in?
-          %li
-            %a{:href => signout_path} Sign out
-        - else
-          %li= link_to image_tag("/assets/facebook_btn.png"), signin_facebook_path
-%ul.nav.nav-tabs
-  %li
-    %a.red-navbar{:href => root_url} Home
-  %li
-    %a.red-navbar{:href => about_path} About
-  %li
-    %a.red-navbar{:href => contact_path} Contact us
+      %a.brand{:href => root_url} Title
+      %ul.nav
+        %li
+          %a{:href => root_url} Home
+        %li
+          %a{:href => about_url} About
 
 
