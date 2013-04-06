@@ -1,43 +1,87 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.twitch-logo{
-  img{
-    padding-top:10px;
+
+.container#about-page{
+  padding-bottom: 100px;
+  h3, h4{
+    color: rgb(199, 47, 47);
+  }
+
+  ul{
+    list-style-type: none;
   }
 }
 
-#blog-feature, #chat-feature, #player_of_month{
-  padding-top:50px;
+footer{
+  padding-top: 20px;
+  background: #faf2f2;
+  min-height:100px;
 }
 
-#player_of_month{
-  padding-bottom:50px;
+#logo-header{
+  padding: 5px 5px 0 0;
 }
 
-.fb-like{
-  text-align:center;
+.introduction{
+  background:url("/assets/intro_pattern.png");
 }
 
-.twitter-follow-button{
-  padding-top:10px;
-  text-align:center;
+.feature-list-description{
+  list-style: none;
+  padding: 15px;
+  margin: 20px auto 36px;
 }
 
-
-.hero-unit{
-  min-width:200px;
-  padding:20px;
-  text-align:center;
-  width:75%;
-  margin: 0 auto;
-  background:rgb(199, 47, 47);
-  li{
-    list-style-type:none;
-  }
+.feature-link{
+  color: rgb(199, 47, 47);
 }
 
-.logo {
+.feature{
+  display: inline-block;
+  width: 30%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.features-images, .community-images{
+  padding-top: 3em;
+}
+
+body{
+  padding-top: 40px;
+  font-family: 'Sintony', sans-serif;
+}
+
+.headline{
+  background: rgb(199, 47, 47);
   text-align: center;
-  padding-bottom: 50px;
 }
+
+.container-headline, .container-features, .container-introduction{
+  max-width: 75em;
+  margin: 0 auto;
+  width: 90%;
+  position: relative;
+  padding: 3em 0;
+  text-align: center;
+}
+
+.container-introduction{
+  text-align: left;
+}
+
+.features{
+  background: rgb(250, 242, 242);
+}
+
+.btn.btn-large.btn-primary.disabled{
+  background: rgb(165, 17, 17);
+}
+
+.btn.btn-small.btn-primary.disabled{
+  background: rgb(199, 19, 19);
+}
+
+
+

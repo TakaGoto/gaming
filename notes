@@ -5,3 +5,111 @@
         - else
           %li= link_to image_tag("/assets/facebook_btn.png"), signin_facebook_path
 
+.container-fluid
+  .landing-logo
+    .logo
+      %img{:src => "/assets/terror_logo.png"}
+      %img{:src => "/assets/terror_text.png"}
+      %img{:src => "/assets/gaming_text.png"}
+    .row
+      - if flash[:notice]
+        .alert.alert-success
+          = flash[:notice]
+      .hero-unit
+        %h2 Coming Soon
+        %h4 dedicated to the Chicago Gaming Community.  The website is developed and written by the gamers of Chicago.  Sign up and learn more about the website.  Join our social network for updates on our site.
+        .social-like
+          %li
+            %a.twitter-follow-button{"data-show-count" => "false",
+                                     "data-size" => "large",
+                                     :href => "https://twitter.com/terrorgamingnet"} follow @terrorgamingnet
+          %li.fb-like{"data-href" => "https://www.facebook.com/pages/terrorgamingnet/466177123433323?fref=ts",
+                      "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false",
+                      "data-width" => "450"}
+      .features-line
+        %ul.nav.nav-line
+          %li.divider#red-line
+        .container#twitch-feature
+          .span3
+            .twitch-logo
+              %img{:src => "/assets/twitch_logo.png"}
+          .span5.offset3
+            .twitch-description
+              %h4 Chicago Streamers
+              %h5
+                We are going to be using Twitch API to integrate Chicago streamers to our website.  Our website will only list Chicago players, making it easier to support our community.  Our goal is to create a partnership with Twitch, so that our community can be more spoken.
+        .container#blog-feature
+          .span3
+            .blog-logo
+              %img{:src => "/assets/blog_feature.png"}
+          .span5.offset3
+            .blog-description
+              %h4 Blogs
+              %h5
+                There are tons of high level players in Chicago, and we want your opinons.  Share your experience and knowledge so that the rest of the gamers in Chicago can become a better player.  Support professional gamers in Chicago so that they can nationally be recognized, making Chicago a well known place for professional gamers.
+
+        .container#chat-feature
+          .span3
+            .chat-logo
+              %img{:src => "/assets/icon_irc.png"}
+          .span5.offset3
+            .chat-description
+              %h4 Chat Rooms
+              %h5
+                There are a lot Chicago gaming group in facebook, many of them over 400.  But because of vast amount of people in a single group, they disabled the facebook chat functionality for those groups.  Chat room will provide social interactions with fellow Chicago players and a personal chat room for events and tournaments, so you'll have a say in the chat room.
+
+        .container#player_of_month
+          .span3
+            .player-logo
+              %img{:src => "/assets/player_of_month_logo.jpg"}
+          .span5.offset3
+            .player-description
+              %h4 Player of the Month: AMA
+              %h5
+                High level players shouldn't be the only ones that gets known in the community.  We want to know who are the most involved and active players in Chicago.  Player of month will have details of this players playstyle, opinions, and be open for AMA.  
+
+
+        %h4
+          Have any ideas for the website? Tell us by
+          %a{:href => contact_url} clicking here!
+
+.twitch-logo{
+  img{
+    padding-top:10px;
+  }
+}
+
+#blog-feature, #chat-feature, #player_of_month{
+  padding-top:50px;
+}
+
+#player_of_month{
+  padding-bottom:50px;
+}
+
+.fb-like{
+  text-align:center;
+}
+
+.twitter-follow-button{
+  padding-top:10px;
+  text-align:center;
+}
+
+
+.hero-unit{
+  min-width:200px;
+  padding:20px;
+  text-align:center;
+  width:75%;
+  margin: 0 auto;
+  background:rgb(199, 47, 47);
+  li{
+    list-style-type:none;
+  }
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 50px;
+}

@@ -1,11 +1,22 @@
-.navbar.navbar-fixed-top
-  .navbar-inner
-    .container
-      %a.brand{:href => root_url} Title
-      %ul.nav
-        %li
-          %a{:href => root_url} Home
-        %li
-          %a{:href => about_url} About
+%header
+  .navbar.navbar-fixed-top
+    .navbar-inner
+      .container
+        %a{:href => root_url}
+          %img.brand#logo-header{:src => "/assets/terror_logo_small.png"}
+        %ul.nav
+          %li
+            %a{:href => root_url} Home
+          %li
+            %a{:href => about_path} About
+          %li
+            %a{:href => contact_path} Contact us
+        %ul.nav.pull-right
+          - if user_signed_in?
+            %li
+              %a.btn.btn-small.btn-primary.disabled{:href => signout_path} Sign out
+          - else
+            %a.btn.btn-small.btn-primary.disabled{:href => signin_facebook_path} Sign up/Login with Facebook
+
 
 

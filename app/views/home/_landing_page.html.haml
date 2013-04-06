@@ -1,67 +1,39 @@
-.container-fluid
-  .landing-logo
-    .logo
-      %img{:src => "/assets/terror_logo.png"}
-      %img{:src => "/assets/terror_text.png"}
-      %img{:src => "/assets/gaming_text.png"}
-    .row
-      - if flash[:notice]
-        .alert.alert-success
-          = flash[:notice]
-      .hero-unit
-        %h2 Coming Soon
-        %h4 dedicated to the Chicago Gaming Community.  The website is developed and written by the gamers of Chicago.  Sign up and learn more about the website.  Join our social network for updates on our site.
-        .social-like
-          %li
-            %a.twitter-follow-button{"data-show-count" => "false",
-                                     "data-size" => "large",
-                                     :href => "https://twitter.com/terrorgamingnet"} follow @terrorgamingnet
-          %li.fb-like{"data-href" => "https://www.facebook.com/pages/terrorgamingnet/466177123433323?fref=ts",
-                      "data-layout" => "button_count", "data-send" => "false", "data-show-faces" => "false",
-                      "data-width" => "450"}
-      .features-line
-        %ul.nav.nav-line
-          %li.divider#red-line
-        .container#twitch-feature
-          .span3
-            .twitch-logo
-              %img{:src => "/assets/twitch_logo.png"}
-          .span5.offset3
-            .twitch-description
-              %h4 Chicago Streamers
-              %h5
-                We are going to be using Twitch API to integrate Chicago streamers to our website.  Our website will only list Chicago players, making it easier to support our community.  Our goal is to create a partnership with Twitch, so that our community can be more spoken.
-        .container#blog-feature
-          .span3
-            .blog-logo
-              %img{:src => "/assets/blog_feature.png"}
-          .span5.offset3
-            .blog-description
-              %h4 Blogs
-              %h5
-                There are tons of high level players in Chicago, and we want your opinons.  Share your experience and knowledge so that the rest of the gamers in Chicago can become a better player.  Support professional gamers in Chicago so that they can nationally be recognized, making Chicago a well known place for professional gamers.
+.headline
+  .container-headline
+    .landing-logo
+      .logo
+        %img{:src => "/assets/terror_logo.png"}
+        %img{:src => "/assets/terror_text.png"}
+        %img{:src => "/assets/gaming_text.png"}
+      %h2 Coming Soon
+      %h4 Website Dedicated to the Chicago Gaming Community
+      %a.btn.btn-large.btn-primary.disabled{:href => signin_facebook_path} Sign up/Login with Facebook
 
-        .container#chat-feature
-          .span3
-            .chat-logo
-              %img{:src => "/assets/icon_irc.png"}
-          .span5.offset3
-            .chat-description
-              %h4 Chat Rooms
-              %h5
-                There are a lot Chicago gaming group in facebook, many of them over 400.  But because of vast amount of people in a single group, they disabled the facebook chat functionality for those groups.  Chat room will provide social interactions with fellow Chicago players and a personal chat room for events and tournaments, so you'll have a say in the chat room.
+.features
+  .container-features
+    %h2 Features
+    .features-images
+      %img{:src => "/assets/features_all.png"}
+    %ul.feature-list-description
+      %li.feature
+        %h5 Chicago Streamers
+        %p Using Twitch API, list of Chicago streamers, ONLY.
+        %a.feature-link{:href => about_url} Learn more
+      %li.feature
+        %h5 Blog
+        %p Blogs by the high level players of Chicago.  As well as the most involved players.
+        %a.feature-link{:href => about_url} Learn more
+      %li.feature
+        %h5 Chat rooms
+        %p Miss our facebook chat rooms? Personal chat rooms for Chicago, including events, so your voice will be heard.
+        %a.feature-link{:href => about_url} Learn more
 
-        .container#player_of_month
-          .span3
-            .player-logo
-              %img{:src => "/assets/player_of_month_logo.jpg"}
-          .span5.offset3
-            .player-description
-              %h4 Player of the Month: AMA
-              %h5
-                High level players shouldn't be the only ones that gets known in the community.  We want to know who are the most involved and active players in Chicago.  Player of month will have details of this players playstyle, opinions, and be open for AMA.  
+.introduction
+  .container-introduction
+    %h2 Our Goal
+    %h5 So much to say, but I know gamers hate reading so lets straight to the point.  Obviously I'll put a TL;DR at the end for those who hate reading with a passion.  
+    %br/
+    %h5 This website is built from the bottom up, no templates, no Wordpress.  This means that anything is possible, its 100% customizable.  We want to build a website that's made for Chicago Gamers.  I'm positive everyone has had moments where they wish a website had a feature.  Personally, I wish Twitch would pinpont streamers from Chicago.  I rather watch Kenny Capulong than some random "profesional" gamer.  I wish they bring facebook chat rooms back for facebook groups.  They disabled them because the group was getting too big.  At the moment the features we're about to implement are only the beginning.  We listen to the community, and we take actions.  Give us feedback, we take criticism with a smile.  We want this website to be the Cornerstone of a big Gaming Community, the one place to go for everything we need to be involved.  
+    %br/
+    %p TL;DR Website for Chicago Gamers.  Give us feedback, and we'll do our best.
 
-
-        %h4
-          Have any ideas for the website? Tell us by
-          %a{:href => contact_url} clicking here!

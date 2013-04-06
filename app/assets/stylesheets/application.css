@@ -13,15 +13,8 @@
  *= require_tree .
  */
 
-footer{
-  padding-bottom:100px;
-}
+font-family: 'Sintony', sans-serif;
 
-.divider#red-line{
-  padding-top: 50px;
-  border-bottom: 1px solid rgb(199, 47, 47);
-}
 
-.red-navbar{
-  color:rgb(199, 47, 47);
-}
+
+
