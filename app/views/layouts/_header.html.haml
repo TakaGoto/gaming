@@ -13,8 +13,7 @@
             %a{:href => contact_path} Contact us
         %ul.nav.pull-right
           - if user_signed_in?
-            %li
-              %a.btn.btn-small.btn-primary.disabled{:href => signout_path} Sign out
+            %a.btn.btn-small.btn-primary.disabled{:href => signout_path} Sign out
           - else
             %a.btn.btn-small.btn-primary.disabled{:href => signin_facebook_path} Sign up/Login with Facebook
 

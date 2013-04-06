@@ -13,6 +13,10 @@
   }
 }
 
+a{
+  cursor: pointer;
+}
+
 footer{
   padding-top: 20px;
   background: #faf2f2;
@@ -77,10 +81,12 @@ body{
 
 .btn.btn-large.btn-primary.disabled{
   background: rgb(165, 17, 17);
+  cursor: pointer;
 }
 
 .btn.btn-small.btn-primary.disabled{
   background: rgb(199, 19, 19);
+  cursor: pointer;
 }
 
 
