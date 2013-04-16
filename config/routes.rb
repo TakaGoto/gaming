@@ -11,6 +11,13 @@ Gaming::Application.routes.draw do
 
   get '/blog' => 'blogs#index', :as => :blog
 
+  get '/users' => 'users#index', :as => :users
+
+  get 'stream/:id' => 'streams#show', :as => :stream_show
+  get '/streams' => 'streams#index', :as => :streams
+  get '/stream/:id/new' => 'streams#new', :as => :new_stream
+  post '/stream/:id/new' => 'streams#create', :as => :stream
+
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post
 end

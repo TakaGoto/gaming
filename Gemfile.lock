@@ -52,8 +52,6 @@ GEM
       multi_json (~> 1.0)
     faraday (0.8.5)
       multipart-post (~> 1.1)
-    google-webfonts (0.1.2)
-      actionpack (>= 3.0.0)
     haml (4.0.0)
       tilt
     hashie (1.2.0)
@@ -131,6 +129,8 @@ GEM
       json (~> 1.4)
     redis (3.0.3)
     ref (1.0.2)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rspec-core (2.12.2)
     rspec-expectations (2.12.1)
       diff-lcs (~> 1.1.3)
@@ -180,7 +180,6 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  google-webfonts
   haml
   jcountdown-rails!
   jquery-rails
@@ -192,6 +191,7 @@ DEPENDENCIES
   pry
   rails (= 3.2.11)
   redis
+  rest-client
   rspec-rails
   sass-rails (~> 3.2.3)
   sqlite3

@@ -1,0 +1,17 @@
+.container
+  %table.table
+    %tr
+      %th Name
+      %th Email
+      %th Stream
+    - @users.each do |user|
+      %tr
+        %th
+          = user.name
+        %th
+          = user.email
+        %th
+          - if user.stream
+            = user.stream.name
+          - else
+            = link_to "add stream", new_stream_path(user.id)

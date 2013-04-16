@@ -36,7 +36,9 @@ gem 'haml'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'redis'
-gem 'google-webfonts'
+gem 'rest-client'
+gem 'pry'
+
 
 gem 'unicorn'
 gem 'newrelic_rpm'

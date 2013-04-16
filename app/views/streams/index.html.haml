@@ -1,0 +1,15 @@
+.container#stream-list
+  .row-fluid#stream-row
+    .span12#stream-row
+      - @streams.each do |stream|
+        - if stream.status != nil
+          .span4.stream-layout
+            .show-stream
+              %a{:href => stream_show_path(stream.id)}
+                %img{:src => stream.twitch["stream"]["preview"]["medium"]}
+              .stream-content
+                = link_to stream.name, stream_show_path(stream.id), :class => "stream-link"
+                with
+                = stream.twitch["stream"]["viewers"]
+                viewers
+

@@ -1,0 +1,12 @@
+.container
+  = form_for @stream, :url => new_stream_path do |form|
+    %fieldset.fields
+      .field
+        = form.label "Twitch Account Name"
+        = form.text_field :name
+    %fieldset.actions
+      = form.submit "Add"
+
+  - if flash[:success]
+    .alert.alert-success
+      = flash[:succes]

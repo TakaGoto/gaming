@@ -18,9 +18,11 @@ a{
 }
 
 footer{
-  padding-top: 20px;
+  position:relative;
+  margin-top: -150px;
+  clear:both;
+  padding-top:20px;
   background: #faf2f2;
-  min-height:100px;
 }
 
 #logo-header{
@@ -58,7 +60,7 @@ body{
 }
 
 .headline{
-  background: rgb(199, 47, 47);
+  background: rgb(151, 47, 47);
   text-align: center;
 }
 

@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  attr_protected :email, :name, :provider, :uid
+  attr_protected :provider, :uid
+  attr_accessible :stream_id, :name, :email
+  has_one :stream
 
   has_many :blogs
 

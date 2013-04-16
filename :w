@@ -1,6 +1,6 @@
-%footer
-  .container
-    .navbar.navbar-bottom#footer
+.navbar.navbar-fixed-bottom
+  %footer
+    .container
       .pull-left
         Copyright © 2013
         %a.feature-link{:href => root_url} TERRORGaming
