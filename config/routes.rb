@@ -17,6 +17,8 @@ Gaming::Application.routes.draw do
   get '/streams' => 'streams#index', :as => :streams
   get '/stream/:id/new' => 'streams#new', :as => :new_stream
   post '/stream/:id/new' => 'streams#create', :as => :stream
+  get '/stream/:id/edit' => 'streams#edit', :as => :edit_stream
+  put '/stream/:id' => 'streams#update'
 
   match '/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/contact' => 'contact#create', :as => 'contact', :via => :post

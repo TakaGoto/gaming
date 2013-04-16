@@ -1,0 +1,9 @@
+.container
+  = form_for @stream, :url => stream_show_path(@stream.id) do |f|
+    %p current stream name
+    %div= @stream.user.name
+    %div= @stream.name
+    %br/
+    %div= f.label "Stream Name"
+    %div= f.text_field "name"
+    %input.btn.btn-primary{:type => "submit"}
