@@ -1,6 +1,7 @@
 .container
   %table.table
     %tr
+      %th
       %th Name
       - if user_signed_in? && current_user.email == "tak.yuki@gmail.com"
         %th Email
@@ -9,6 +10,8 @@
       %th Stream
     - @users.each do |user|
       %tr
+        %th
+          = user.id
         %th
           = user.name
         %th
