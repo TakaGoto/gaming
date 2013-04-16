@@ -1,19 +1,22 @@
-- if user_signed_in? && current_user.email == "tak.yuki@gmail.com"
-  .container
-    %table.table
-      %tr
-        %th Name
+.container
+  %table.table
+    %tr
+      %th Name
+      - if user_signed_in? && current_user.email == "tak.yuki@gmail.com"
         %th Email
-        %th Stream
-      - @users.each do |user|
-        %tr
-          %th
-            = user.name
-          %th
+      - else
+        %th
+      %th Stream
+    - @users.each do |user|
+      %tr
+        %th
+          = user.name
+        %th
+          - if user_signed_in? && current_user.email == "tak.yuki@gmail.com"
             = user.email
-          %th
-            - if user.stream
-              = user.stream.name
-            - else
-              = link_to "add stream", new_stream_path(user.id)
+        %th
+          - if user.stream
+            = user.stream.name
+          - elsif user_signed_in? && current_user.email == "tak.yuki@gmail.com"
+            = link_to "add stream", new_stream_path(user.id)
 
