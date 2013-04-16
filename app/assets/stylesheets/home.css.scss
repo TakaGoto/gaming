@@ -64,7 +64,8 @@ body{
   text-align: center;
 }
 
-.container-headline, .container-features, .container-introduction{
+.container-headline, .container-features, .container-introduction, .container-stream,
+.container-writer{
   max-width: 75em;
   margin: 0 auto;
   width: 90%;
@@ -73,7 +74,8 @@ body{
   text-align: center;
 }
 
-.container-introduction{
+
+.container-introduction, .container-stream, .container-writer{
   text-align: left;
 }
 
