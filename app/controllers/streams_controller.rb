@@ -1,5 +1,7 @@
 class StreamsController < ApplicationController
   def show
+    require 'pry'
+    binding.pry
     @stream =Stream.find_by_id(params[:id])
   end
 
