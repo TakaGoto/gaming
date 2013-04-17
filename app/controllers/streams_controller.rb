@@ -8,7 +8,9 @@ class StreamsController < ApplicationController
     @list_of_streams = @streams.reduce("") do |stream_list, stream|
       (stream_list << ("#{stream.name},").gsub(/\s+/, ""))
     end
+
     @online_streams = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams?channel=#{@list_of_streams}"))["streams"]
+
   end
 
   def new
