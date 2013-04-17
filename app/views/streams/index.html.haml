@@ -5,10 +5,10 @@
         - @stream_user = Stream.where(name: stream["channel"]["url"].split('/')[3])
         .span4.stream-layout
           .show-stream
-            %a{:href => stream_show_path(@stream_user[0].user.id)}
+            %a{:href => stream_show_path(@stream_user[0].id)}
               %img{:src => stream["preview"]["medium"]}
             .stream-content
-              = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].user.id), :class => "stream-link"
+              = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].id), :class => "stream-link"
               with
               = stream["viewers"]
               viewers
