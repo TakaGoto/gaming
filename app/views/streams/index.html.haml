@@ -10,6 +10,9 @@
                 %img{:src => stream["preview"]["medium"]}
               .stream-content
                 = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].id), :class => "stream-link"
+                (
+                = stream["channel"]["display_name"]
+                )
                 with
                 = stream["viewers"]
                 viewers
