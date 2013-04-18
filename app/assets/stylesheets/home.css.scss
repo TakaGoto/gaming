@@ -17,6 +17,10 @@ a{
   cursor: pointer;
 }
 
+.gfc{
+  float:left
+}
+
 footer{
   position:relative;
   margin-top: -150px;
@@ -31,6 +35,9 @@ footer{
 
 .introduction{
   background:url("/assets/intro_pattern.png");
+}
+
+.sponsors{
 }
 
 .feature-list-description{
@@ -65,7 +72,7 @@ body{
 }
 
 .container-headline, .container-features, .container-introduction, .container-stream,
-.container-writer{
+.container-writer, .container-sponsors, .sponsors-logo{
   max-width: 75em;
   margin: 0 auto;
   width: 90%;
