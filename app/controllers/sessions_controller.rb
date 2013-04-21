@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
                         :uid => auth["uid"]).first || User.create_twitch(auth)
     else
       user = User.where(:provider => auth['provider'],
-                        :email => auth["info"]["email"]
+                        :email => auth["info"]["email"],
                         :uid => auth['uid']).first || User.create_with_omniauth(auth)
     end
 

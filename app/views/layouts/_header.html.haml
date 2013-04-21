@@ -19,6 +19,8 @@
           - if user_signed_in?
             %a.btn.btn-small.btn-primary.disabled{:href => signout_path} Sign out
           - else
+            %a.btn.btn-small.btn-primary.disabled.signin
+              Sign up/Login with:
             %a.btn.btn-small.btn-primary.disabled{:href => signin_facebook_path} Sign up/Login with Facebook
             %a.btn.btn-small.btn-primary.disabled.twitch{:href => signin_twitch_path} or Twitch
 
