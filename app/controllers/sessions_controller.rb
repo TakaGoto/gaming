@@ -1,8 +1,16 @@
 class SessionsController < ApplicationController
   def create
     auth = request.env["omniauth.auth"]
-    user = User.where(:provider => auth['provider'],
-                      :uid => auth['uid']).first || User.create_with_omniauth(auth)
+    if auth['provider'] == 'twitch_oauth2'
+      user = User.where(:provider => auth['provider'],
+                        :email => auth["info"]["email"],
+                        :uid => auth["uid"]).first || User.create_twitch(auth)
+    else
+      user = User.where(:provider => auth['provider'],
+                        :email => auth["info"]["email"]
+                        :uid => auth['uid']).first || User.create_with_omniauth(auth)
+    end
+
     session[:user_id] = user.id
     redirect_to root_url, :notice => "Thanks for Signing up! #{user.name}, we will notify you when the server is up"
   end
