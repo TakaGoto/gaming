@@ -100,6 +100,11 @@ body{
   cursor: pointer;
 }
 
+.btn.btn-small.btn-primary.disabled{
+  background: #c72f2f;
+  cursor: pointer;
+}
+
 .btn.btn-small.btn-primary.disabled.signin{
   background: #c72f2f;
   cursor: auto;
