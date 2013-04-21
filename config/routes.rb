@@ -8,6 +8,7 @@ Gaming::Application.routes.draw do
   match '/auth/failure' => 'sessions#failure'
   match '/signout' => 'sessions#destroy', :as => :signout
   match '/signin' => 'sessions#new', :as => :signin_facebook
+  match '/signin_twitch' => 'sessions#new_twitch', :as => :signin_twitch
 
   get '/blog' => 'blogs#index', :as => :blog
 

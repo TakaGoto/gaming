@@ -96,7 +96,12 @@ body{
 }
 
 .btn.btn-small.btn-primary.disabled{
-  background: rgb(199, 19, 19);
+  background: #3b5998;
+  cursor: pointer;
+}
+
+.btn.btn-small.btn-primary.disabled.twitch{
+  background: #6441a5;
   cursor: pointer;
 }
 

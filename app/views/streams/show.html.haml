@@ -11,10 +11,6 @@
         %param{:name => "allowNetworking", :value => "all"}/
         %param{:name => "movie", :value => "http://www.twitch.tv/widgets/live_embed_player.swf"}/
         %param{:name => "flashvars", :value => "hostname=www.twitch.tv&channel=#{@stream.name}&auto_play=true&start_volume={VOLUME}"}/
-      .stream-content
-        %p
-          = @stream_data["channel"]["name"]
-          = @stream_data["viewers"]
 
     .span3#stream-chat
       %iframe#chat_embed{:frameborder => "0",
