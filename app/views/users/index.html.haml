@@ -22,4 +22,5 @@
             = user.stream.name
           - elsif user_signed_in? && current_user.email == "tak.yuki@gmail.com"
             = link_to "add stream", new_stream_path(user.id)
+            = link_to "edit", edit_stream_path(Stream.where(user_id: user.id).first.id)
 
