@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   def self.create_twitch(auth)
     create! do |user|
       user.provider = auth['provider']
-      user.uid = auth['uid']
+      user.uid = auth['uid'].to_s
       if auth['info']
         user.name = auth['info']['nickname'] || ""
         user.email = auth['info']['email'] || ""

@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     if auth['provider'] == 'twitch_oauth2'
       user = User.where(:provider => auth['provider'],
                         :email => auth["info"]["email"],
-                        :uid => auth["uid"]).first || User.create_twitch(auth)
+                        :uid => auth["uid"].to_s).first || User.create_twitch(auth)
     else
       user = User.where(:provider => auth['provider'],
                         :email => auth["info"]["email"],
