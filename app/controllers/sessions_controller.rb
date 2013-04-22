@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
   def create
     auth = request.env["omniauth.auth"]
+    require 'pry'
+    binding.pry
     if auth['provider'] == 'twitch_oauth2'
       user = User.where(:provider => auth['provider'],
                         :email => auth["info"]["email"],

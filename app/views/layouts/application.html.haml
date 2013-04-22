@@ -6,12 +6,13 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     %meta{"initial-scale" => "1.0", :name => "viewport content", :width => "device-width,"}
-    = render 'layouts/meebo'
 
   %body
+    = render 'layouts/meebo'
     = render 'layouts/header'
     = yield
-    = render 'layouts/footer'
+    :javascript
+      Meebo("domReady");
 
 
 
