@@ -9,8 +9,11 @@
 
 
   %body
+    = render 'layouts/meebo'
     = render 'layouts/header'
     = yield
+    :javascript
+        Meebo("domReady");
 
 
 
