@@ -17,3 +17,14 @@ _gaq.push ["_trackPageview"]
           s = document.getElementsByTagName("script")[0]
             s.parentNode.insertBefore ga, s
             )()
+
+
+
+              .container
+    .navbar.navbar-bottom#footer
+      .pull-left
+        Copyright © 2013
+        %a.feature-link{:href => root_url} TERRORGaming
+      .pull-right
+        %a.feature-link{:href => about_path} About
+
