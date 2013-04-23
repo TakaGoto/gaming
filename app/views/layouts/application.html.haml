@@ -8,11 +8,8 @@
     %meta{"initial-scale" => "1.0", :name => "viewport content", :width => "device-width,"}
 
   %body
-    = render 'layouts/meebo'
     = render 'layouts/header'
     = yield
-    :javascript
-      Meebo("domReady");
 
 
 
