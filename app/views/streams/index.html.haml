@@ -6,10 +6,10 @@
           - @stream_user = Stream.where(name: stream["channel"]["url"].split('/')[3])
           .span4.stream-layout
             .show-stream
-              %a{:href => stream_show_path(@stream_user[0].id)}
+              %a{:href => stream_show_path(@stream_user[0].name)}
                 %img{:src => stream["preview"]["medium"]}
               .stream-content
-                = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].id), :class => "stream-link"
+                = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].name), :class => "stream-link"
                 (
                 = stream["channel"]["display_name"]
                 )
@@ -19,4 +19,5 @@
                 %br/
                 playing
                 = stream["game"]
+      - else
 

@@ -6,21 +6,22 @@ Gaming::Application.routes.draw do
 
   match '/auth/:provider/callback' => 'sessions#create'
   match '/auth/failure' => 'sessions#failure'
-  match '/signout' => 'sessions#destroy', :as => :signout
-  match '/signin' => 'sessions#new', :as => :signin_facebook
-  match '/signin_twitch' => 'sessions#new_twitch', :as => :signin_twitch
+  match '/p/signout' => 'sessions#destroy', :as => :signout
+  match '/p/signin' => 'sessions#new', :as => :signin_facebook
+  match '/p/signin_twitch' => 'sessions#new_twitch', :as => :signin_twitch
 
-  get '/blog' => 'blogs#index', :as => :blog
+  get '/p/blog' => 'blogs#index', :as => :blog
 
-  get '/users' => 'users#index', :as => :users
+  get '/p/users' => 'users#index', :as => :users
 
-  get 'stream/:id' => 'streams#show', :as => :stream_show
-  get '/streams' => 'streams#index', :as => :streams
+  get ':name' => 'streams#show', :as => :stream_show
+  get '/p/streams' => 'streams#index', :as => :streams
   get '/stream/:id/new' => 'streams#new', :as => :new_stream
   post '/stream/:id/new' => 'streams#create', :as => :stream
   get '/stream/:id/edit' => 'streams#edit', :as => :edit_stream
   put '/stream/:id' => 'streams#update'
+  get '/p/featured_streams' => 'streams#featured_index', :as => :featured_streams
 
-  match '/contact' => 'contact#new', :as => 'contact', :via => :get
-  match '/contact' => 'contact#create', :as => 'contact', :via => :post
+  match '/p/contact' => 'contact#new', :as => 'contact', :via => :get
+  match '/p/contact' => 'contact#create', :as => 'contact', :via => :post
 end

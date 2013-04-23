@@ -1,6 +1,6 @@
 class StreamsController < ApplicationController
   def show
-    @stream =Stream.find_by_id(params[:id])
+    @stream =Stream.find_by_name(params[:name])
     @stream_data = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/#{@stream.name.gsub(/\s+/, "")}"))["stream"]
   end
 
@@ -11,7 +11,11 @@ class StreamsController < ApplicationController
     end
 
     @online_streams = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams?channel=#{@list_of_streams}"))["streams"]
+  end
 
+  def featured_index
+    @featured_streams = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/featured?limit=20"))["featured"]
+    binding.pry
   end
 
   def new
