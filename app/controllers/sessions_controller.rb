@@ -12,7 +12,7 @@ class SessionsController < ApplicationController
     end
 
     session[:user_id] = user.id
-    redirect_to root_url, :notice => "Thanks for Signing up! #{user.name}, we will notify you when the server is up"
+    redirect_to root_url, :notice => "Welcome!"
   end
 
   def destroy

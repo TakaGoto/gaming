@@ -2,6 +2,10 @@ class StreamsController < ApplicationController
   def show
     @stream =Stream.find_by_name(params[:name])
     @stream_data = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/#{@stream.name.gsub(/\s+/, "")}"))["stream"]
+    if @stream_data == nil?
+      flash[:notice] = "that user is not online"
+      redirect_to root_url
+    end
   end
 
   def index
