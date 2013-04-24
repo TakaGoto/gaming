@@ -11,7 +11,8 @@ class User < ActiveRecord::Base
       user.uid = auth['uid'].to_s
       if auth['info']
         user.name = auth['info']['nickname'] || ""
-        user.email = auth['info']['email'] || ""
+        user.email = auth['info']['email'] ||
+                     auth['extra']['email'] || ""
       end
     end
   end
