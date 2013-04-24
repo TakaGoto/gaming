@@ -13,7 +13,6 @@
 //= require jquery
 //= require jcountdown
 //= require jquery_ujs
-//= require twitter/bootstrap
 //= require_tree .
 
 var _gaq = _gaq || [];
