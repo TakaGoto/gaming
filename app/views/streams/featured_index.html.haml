@@ -1,2 +1,21 @@
-%h2 looks like no chicago streamers at the moment, while you're here why not checkout the featured streams from Twitch.
-
+.container.stream-list
+  .row-fluid.stream-row
+    .span12.stream-row
+      .alert.alert-error
+        %h4 looks like no chicago streamers at the moment, while you're here why not checkout the featured streams of Twitch.
+      - @featured_streams.each do |stream|
+        .span4.stream-layout
+          .title
+            %h5
+              = truncate(stream["stream"]["channel"]["status"], :length => 50)
+          .show-stream
+            %a{:href => show_featured_path(stream["stream"]["channel"]["name"])}
+            %img{:src => stream["stream"]["preview"]["medium"]}
+            .stream-content
+              = link_to stream["stream"]["channel"]["display_name"], show_featured_path(stream["stream"]["channel"]["name"]), :class => "stream-link"
+              with
+              = stream["stream"]["viewers"]
+              viewers
+              %br/
+              playing
+              = stream["stream"]["game"]

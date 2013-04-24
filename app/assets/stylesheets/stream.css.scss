@@ -7,30 +7,27 @@
   margin:0;
 }
 
-.span9#stream-show{
+.span9.stream-show{
   height: 600px;
 }
 
-.container-fluid#stream-show{
+.container-fluid.stream-show{
   padding-top:50px;
 }
 
-.span3#stream-chat{
+.span3.stream-chat{
 }
 
-.span12#stream-row{
+.span12.stream-row{
   margin-right:auto;
   margin-left:50px;
 }
 
 .stream-content{
   padding-top: 10px;
+  padding-bottom: 20px;
 }
 
-.container-fluid#stream-list{
+.container-fluid.stream-list{
   padding-top:50px;
-}
-
-.show-stream{
-  padding-top: 30px;
 }

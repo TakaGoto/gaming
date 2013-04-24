@@ -1,10 +1,13 @@
-.container#stream-list
-  .row-fluid#stream-row
-    .span12#stream-row
+.container.stream-list
+  .row-fluid.stream-row
+    .span12.stream-row
       - if !@online_streams.empty?
         - @online_streams.each do |stream|
           - @stream_user = Stream.where(name: stream["channel"]["url"].split('/')[3])
           .span4.stream-layout
+            .title
+              %h5
+                = truncate(@online_streams[0]["channel"]["status"], :length => 50)
             .show-stream
               %a{:href => stream_show_path(@stream_user[0].name)}
                 %img{:src => stream["preview"]["medium"]}
@@ -19,5 +22,3 @@
                 %br/
                 playing
                 = stream["game"]
-      - else
-

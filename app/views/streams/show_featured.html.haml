@@ -1,3 +1,4 @@
+.container
 .container-fluid.stream-show
   .row-fluid
     .span9.stream-show
@@ -8,7 +9,7 @@
           playing
           = @stream_data["game"]
       %object#live_embed_player_flash{:bgcolor => "#000000",
-        :data => "http://www.twitch.tv/widgets/live_embed_player.swf?channel=#{@stream.name}",
+        :data => "http://www.twitch.tv/widgets/live_embed_player.swf?channel=#{@stream_name}",
         :height => "100%",
         :width => "100%",
         :type => "application/x-shockwave-flash"}
@@ -16,12 +17,12 @@
         %param{:name => "allowScriptAccess", :value => "always"}/
         %param{:name => "allowNetworking", :value => "all"}/
         %param{:name => "movie", :value => "http://www.twitch.tv/widgets/live_embed_player.swf"}/
-        %param{:name => "flashvars", :value => "hostname=www.twitch.tv&channel=#{@stream.name}&auto_play=true&start_volume={VOLUME}"}/
+        %param{:name => "flashvars", :value => "hostname=www.twitch.tv&channel=#{@stream_name}&auto_play=true&start_volume={VOLUME}"}/
 
     .span3.stream-chat
       %iframe#chat_embed{:frameborder => "0",
         :height => "645px",
         :scrolling => "no",
-        :src => "http://twitch.tv/chat/embed?channel=#{@stream.name}&amp;popout_chat=true",
+        :src => "http://twitch.tv/chat/embed?channel=#{@stream_name}&amp;popout_chat=true",
         :width => "300px"}
 

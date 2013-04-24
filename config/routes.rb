@@ -21,6 +21,7 @@ Gaming::Application.routes.draw do
   get '/stream/:id/edit' => 'streams#edit', :as => :edit_stream
   put '/stream/:id' => 'streams#update'
   get '/p/featured_streams' => 'streams#featured_index', :as => :featured_streams
+  get '/featured/:name' => 'streams#show_featured', :as => :show_featured
 
   match '/p/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/p/contact' => 'contact#create', :as => 'contact', :via => :post
