@@ -7,7 +7,7 @@
         .span4.stream-layout
           .title
             %h5
-              = truncate(stream["stream"]["channel"]["status"], :length => 50)
+              = truncate(stream["stream"]["channel"]["status"], :length => 40)
           .show-stream
             %a{:href => show_featured_path(stream["stream"]["channel"]["name"])}
             %img{:src => stream["stream"]["preview"]["medium"]}

@@ -7,7 +7,7 @@
           .span4.stream-layout
             .title
               %h5
-                = truncate(@online_streams[0]["channel"]["status"], :length => 50)
+                = truncate(@online_streams[0]["channel"]["status"], :length => 40)
             .show-stream
               %a{:href => stream_show_path(@stream_user[0].name)}
                 %img{:src => stream["preview"]["medium"]}
