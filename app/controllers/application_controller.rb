@@ -7,6 +7,18 @@ class ApplicationController < ActionController::Base
 
   before_filter :check_url
 
+  def get_twitch_stream(name)
+    (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/#{name.gsub(/\s+/, "")}"))["stream"]
+  end
+
+  def get_stream_list(streams)
+    (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams?channel=#{streams}"))["streams"]
+  end
+
+  def get_featured_streams
+    (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/featured?limit=20"))["featured"]
+  end
+
   def check_url
     if request.host == "enigmatic-taiga-1462.herokuapp.com" then
       redirect_to request.protocol + "www.terrorgaming.net" + request.fullpath

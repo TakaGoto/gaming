@@ -10,9 +10,9 @@
               = truncate(stream["stream"]["channel"]["status"], :length => 40)
           .show-stream
             %a{:href => show_featured_path(stream["stream"]["channel"]["name"])}
-            %img{:src => stream["stream"]["preview"]["medium"]}
+            %img.stream-img{:src => stream["stream"]["preview"]["medium"]}
             .stream-content
-              = link_to stream["stream"]["channel"]["display_name"], show_featured_path(stream["stream"]["channel"]["name"]), :class => "stream-link"
+              = link_to stream["stream"]["channel"]["display_name"], stream_show_path(stream["stream"]["channel"]["name"]), :class => "stream-link"
               with
               = stream["stream"]["viewers"]
               viewers

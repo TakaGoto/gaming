@@ -10,7 +10,7 @@
                 = truncate(stream["channel"]["status"], :length => 40)
             .show-stream
               %a{:href => stream_show_path(@stream_user[0].name)}
-                %img{:src => stream["preview"]["medium"]}
+                %img.stream-img{:src => stream["preview"]["medium"]}
               .stream-content
                 = link_to @stream_user[0].user.name, stream_show_path(@stream_user[0].name), :class => "stream-link"
                 (

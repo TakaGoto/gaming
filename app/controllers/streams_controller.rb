@@ -1,7 +1,8 @@
 class StreamsController < ApplicationController
   def show
-    @stream =Stream.find_by_name(params[:name])
-    @stream_data = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/#{@stream.name.gsub(/\s+/, "")}"))["stream"]
+    @stream_name = params[:name]
+    @stream_data = get_twitch_stream(params[:name])
+    redirect_to streams_path, :notice => "the user is not online" if @stream_data.nil?
   end
 
   def index
@@ -10,14 +11,12 @@ class StreamsController < ApplicationController
       (stream_list << ("#{stream.name},").gsub(/\s+/, ""))
     end
 
-    @online_streams = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams?channel=#{@list_of_streams}"))["streams"]
-    if @online_streams.empty?
-      redirect_to featured_streams_path
-    end
+    @online_streams = get_stream_list(@list_of_streams)
+    redirect_to featured_streams_path if @online_streams.empty?
   end
 
   def featured_index
-    @featured_streams = (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/featured?limit=20"))["featured"]
+    @featured_streams = get_featured_streams
   end
 
   def show_featured
