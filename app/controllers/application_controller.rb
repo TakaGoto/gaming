@@ -4,8 +4,13 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   helper_method :user_signed_in?
   helper_method :correct_user?
+  helper_method :ty_client
 
   before_filter :check_url
+
+  def yt_client
+    @yt_client ||= YouTubeIt::Client.new(:username => "ChicagoTERRORGaming", :password => "Bokuwakuma1!", :dev_key => "AI39si59MWdVUf7ZLNvJ0polxZuzDnJbspD-HXUTTReZmZ9YkqkLs_imORwFuoNiHOBIJ8lNq5FXWmOcMGznc3OR8dFK55k-UA")
+  end
 
   def get_twitch_stream(name)
     (JSON.parse(RestClient.get "https://api.twitch.tv/kraken/streams/#{name.gsub(/\s+/, "")}"))["stream"]

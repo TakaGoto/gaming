@@ -30,6 +30,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'youtube_it'
 gem 'jcountdown-rails', :git => 'http://github.com/rezwyi/jcountdown-rails.git'
 gem 'jquery-rails'
 gem 'haml'

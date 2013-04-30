@@ -1,0 +1,32 @@
+.container
+  .row-fluid
+    .span12.video-show
+      %h2= @yt_video.title
+      = raw @yt_video.embed_html5({:class => 'video-player', :id => 'my-video', :width => "100%", :height => "600", :frameborder => '1', :url_params => {:option_one => "value", :option_two => "value"}})
+
+      .span8.video-detail
+        %h5
+          = @yt_video.view_count
+          views
+          %br/
+          = @yt_video.description
+      .span4.subscribe
+        %iframe{:scrolling => "no", :src => "http://www.youtube.com/subscribe_widget?p=#{@yt_video.author.name}", :style => "overflow: hidden; height: 105px; width: 375px; border: none;"}
+
+
+
+      #disqus_thread
+        :javascript
+          var disqus_shortname = 'terrorgaming';
+
+          (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();
+        %noscript
+          Please enable JavaScript to view the
+          %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
+          %a.dsq-brlink{:href => "http://disqus.com"}
+          comments powered by
+          %span.logo-disqus Disqus
+

@@ -1,0 +1,26 @@
+.container
+  .row-fluid.videos-list
+    .span12
+      .row-fluid
+        - @yt_videos.each do |video|
+          .span4.video-list
+            .video
+              %h4
+                = link_to truncate(video.title, :length => 30), show_video_path(video.unique_id), :class => "video-link"
+              %a{:href => show_video_path(video.unique_id)}
+                %img{:src => video.thumbnails[1].url}
+                  .video-detail
+                    .btn.btn-small.btn-primary.disabled.views
+                      = video.view_count
+                      views
+
+
+
+
+
+
+
+
+
+
+

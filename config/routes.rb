@@ -22,6 +22,9 @@ Gaming::Application.routes.draw do
   put '/stream/:id' => 'streams#update'
   get '/p/featured_streams' => 'streams#featured_index', :as => :featured_streams
 
+  get '/p/videos' => 'videos#index', :as => :videos
+  get '/video/:id' => 'videos#show', :as => :show_video
+
   match '/p/contact' => 'contact#new', :as => 'contact', :via => :get
   match '/p/contact' => 'contact#create', :as => 'contact', :via => :post
 end
