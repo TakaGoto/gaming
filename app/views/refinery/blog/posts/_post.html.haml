@@ -1,0 +1,40 @@
+.blog-show-wrapper
+  .container.blog-show
+    .row-fluid
+      .span9.blog-article
+        - flash.each do |key, value|
+          #flash{:class => "flash flash_#{key}"}
+            = value
+        %article#blog_post
+          %header
+            %h1.blog-title= @post.title
+            %section.details
+              %time.posted_at{:datetime => @post.published_at.to_date, :format => :default}
+                = t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :short))
+              = content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.username}", :class => "blog_author") if @post.author.present?
+              - if @post.source_url.present?
+                .blog_source
+                  = "#{t('source', :scope => 'refinery.blog.posts.show')}: "
+                  = link_to (@post.source_url_title.blank? ? @post.source_url : @post.source_url_title), @post.source_url
+          %br/
+          .blog-show-content
+            = @post.body.html_safe
+            - if Refinery::Blog::Post::ShareThis.enabled?
+              %span.st_sharethis{:displayText => "ShareThis"}
+        = render :partial => '/refinery/draft_page_message' unless @post.nil? or @post.live?
+
+        #disqus_thread
+          :javascript
+            var disqus_shortname = 'terrorgaming';
+
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);})();
+          %noscript
+            Please enable JavaScript to view the
+            %a{:href => "http://disqus.com/?ref_noscript"} comments powered by Disqus.
+            %a.dsq-brlink{:href => "http://disqus.com"}
+            comments powered by
+            %span.logo-disqus Disqus
+

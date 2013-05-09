@@ -1,0 +1,17 @@
+.blog-wrapper
+  .container.blog
+    .row-fluid
+      .span7
+        - content_for :title, "#{t('.posts_tagged')} '#{@tag_name.titleize}'"
+        - content_for :body_content_title, "#{t('.posts_tagged')} &#8220;#{@tag_name.titleize}&#8221;".html_safe
+        - content_for :body_content_left do
+          - if @posts.any?
+            .gamer-blogs
+              %section#blog_posts
+                = render :partial => "/refinery/blog/shared/post", :collection => @posts
+                = will_paginate @posts
+          - else
+            %p= t('.no_blog_articles_yet')
+        = render :partial => '/refinery/blog/shared/body_content_right'
+        = render :partial => "/refinery/content_page"
+        - content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend')

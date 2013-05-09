@@ -6,7 +6,9 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development, :test do
   gem 'rspec-rails'
+  group :development, :test do
   gem 'sqlite3'
+end
   gem 'pry'
 end
 
@@ -30,9 +32,11 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms', '~> 2.0.0'
 gem 'youtube_it'
 gem 'jcountdown-rails', :git => 'http://github.com/rezwyi/jcountdown-rails.git'
-gem 'jquery-rails'
+gem 'jquery-rails', '~> 2.0.0'
 gem 'haml'
 gem 'omniauth'
 gem 'omniauth-facebook'

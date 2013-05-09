@@ -1,3 +1,110 @@
-#blogs-index{
-  margin-left:0;
+.css_class{
+  color: #c72f2f;
+}
+
+.show-tags, .rss-feed{
+  padding: 0 0 10px 10px;
+  background:white;
+  border: 1px solid #ddd;
+}
+
+.rss-feed{
+  margin-top: 20px;
+}
+
+h1.blog-title{
+  color: rgb(199, 47, 47);
+}
+
+.blog-show-wrapper{
+  border-top: 1px solid rgb(199, 47, 47);
+}
+
+.inner{
+}
+
+.span9.blog-article{
+  border-right: 1px solid rgb(199, 47, 47);
+  padding: 10px;
+}
+
+.blog-index-content{
+  padding: 10px 10px 10px 20px;
+  max-width:60%;
+}
+
+section.no_body_content_title.no_body.no_side_body.no_body_content_right,
+section#body_content_left, .inner, #show_blog_post, .blog-show-wrapper,
+.container.blog-show, .row-fluid, .span9.blog-article{
+  height:100%;
+}
+
+.blog-show-content{
+  padding-top: 50px;
+}
+
+.container.blog{
+  height: 100%;
+}
+
+.inner{
+  padding-top: 20px;
+}
+
+section.details, time.posted_at, section#blog_posts,
+.gamer-blogs, article.blog_post, .post-image, .blog-index-content,
+aside.tagged, .teaser, section.clearfix{
+  float:left;
+}
+
+.post-image{
+  width: 200px;
+  max-width:200px;
+}
+
+.gamer-blogs{
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.span7.post-show{
+  border: 1px solid #ddd;
+  background: white;
+}
+
+section.clearfix{
+  padding-top:20px;
+}
+
+.blog-wrapper{
+  background-color: #f2f2f2;
+  height: 100%;
+}
+
+article.blog_post{
+  border-bottom: 1px solid #ddd;
+  padding:20px;
+  min-width:669px;
+}
+
+.blog-show-header{
+  border-bottom: 1px solid #ddd;
+  padding-bottom:20px;
+}
+
+.blog-body{
+  padding-top:20px;
+}
+
+h1.blog-title{
+  font-size: 30px;
+}
+
+article{
+  a{
+    color: rgb(199, 47, 47);
+  }
+  a:hover{
+    text-decoration: none;
+  }
 }

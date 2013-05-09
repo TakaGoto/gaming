@@ -1,0 +1,4 @@
+<%= render_content_page(@page, {
+      :hide_sections => local_assigns[:hide_sections]
+    }) %>
+<%= render '/refinery/draft_page_message' unless @page.nil? or @page.live? -%>

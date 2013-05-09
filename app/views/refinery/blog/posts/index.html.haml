@@ -1,0 +1,28 @@
+.blog-wrapper
+  .container.blog
+    .row-fluid
+      .span12
+        %h1 TERROR Gaming Blogs
+        .row-fluid
+          .span7
+            - if @posts.any?
+              .gamer-blogs
+                %section#blog_posts
+                  = render :partial => "/refinery/blog/shared/post", :collection => @posts
+                  = will_paginate @posts
+            - else
+              %p= t('.no_blog_articles_yet')
+          - content_for :body_content_right_prepend do
+            = raw @page.content_for(Refinery::Pages.default_parts.second.to_sym)
+          - end if Refinery::Pages.default_parts.many?
+          = render :partial => "/refinery/content_page"
+          - content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend')
+          .span4.offset1
+            .show-tags
+              - if @tags.any?
+                %h2 Tags
+                %nav.tags
+                  - tag_cloud(@tags, %w(tag1 tag2 tag3 tag4)) do |tag, css_class|
+                    = link_to tag.name, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize), :class => "css_class"
+
+

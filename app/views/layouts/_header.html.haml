@@ -2,27 +2,31 @@
   .navbar.navbar-fixed-top
     .navbar-inner
       .container
-        %a{:href => root_url}
+        %a{:href => '/'}
           %img.brand#logo-header{:src => "/assets/terror_logo_small.png"}
         %ul.nav
           %li
-            %a{:href => root_url} Home
+            %a{:href => '/'} Home
           %li
-            %a{:href => about_path} About
+            %a{:href => '/p/streams'} Chicago Streams
           %li
-            %a{:href => contact_path} Contact us
+            %a{:href => '/p/videos'} Videos
           %li
-            %a{:href => streams_path} Chicago Streams
+            %a{:href => '/b/blog'} Blogs
           %li
-            %a{:href => videos_path} Videos
+            %a{:href => '/p/about'} About
+          %li
+            %a{:href => '/p/contact'} Contact us
+
         %ul.nav.pull-right
           - if user_signed_in?
             %a.btn.btn-small.btn-primary.disabled{:href => signout_path} Sign out
           - else
             %a.btn.btn-small.btn-primary.disabled.signin
-              Sign up/Login with:
-            %a.btn.btn-small.btn-primary.disabled.facebook{:href => signin_facebook_path} Facebook
-            %a.btn.btn-small.btn-primary.disabled.twitch{:href => signin_twitch_path} Twitch
+              Sign in with:
+            %a.btn.btn-small.btn-primary.disabled.facebook{:href => '/p/signin'} Facebook
+            %a.btn.btn-small.btn-primary.disabled.twitch{:href => '/p/signin_twitch'} Twitch
+= render 'refinery/site_bar'
 
 
 

@@ -1,0 +1,18 @@
+- if post.live?
+  %article.blog_post{:id => dom_id(post)}
+    .post-image= link_to (image_fu Refinery::Image.find_by_id(post.image_id), "200x200"), refinery.blog_post_path(post)
+    .blog-index-content
+      %h1.blog-title= link_to post.title, refinery.blog_post_path(post)
+      %section.details
+        %time.posted_at{:datetime => post.published_at.to_date, :format => :default}
+          = t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(post.published_at.to_date, :format => :short))
+          = "#{t('by', :scope => 'refinery.blog.posts.show')} #{post.author.username}" if post.author.present?
+        %br/
+        - if (tags = post.tags).any?
+          %aside.tagged
+            = t('tagged', :scope => 'refinery.blog.posts.show')
+            = raw tags.collect { |tag| link_to tag, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize) }.to_sentence
+
+
+
+
