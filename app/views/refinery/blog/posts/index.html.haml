@@ -12,9 +12,7 @@
                   = will_paginate @posts
             - else
               %p= t('.no_blog_articles_yet')
-          - end if Refinery::Pages.default_parts.many?
-          = render :partial => "/refinery/content_page"
-          - content_for :stylesheets, stylesheet_link_tag('refinery/blog/frontend')
+            = render :partial => "/refinery/content_page"
           .span4.offset1
             .show-tags
               - if @tags.any?

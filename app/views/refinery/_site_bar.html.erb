@@ -6,6 +6,7 @@
   <div id='site_bar'>
     <div id='site_bar_content' class='clearfix'>
       <div id='editor_switch'>
+        <%= link_to "Home", "/" %>
         <%= site_bar_switch_link -%>
       </div>
       <%= link_to image_tag("#{"http://refinerycms.com/images/" unless local_request?}refinery/logo-site-bar.png", :alt => "Refinery (tm) Content Manager"),
