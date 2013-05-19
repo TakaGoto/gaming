@@ -1,7 +1,5 @@
 class HomeController < ApplicationController
-  def index
-  end
-
-  def about
+  def refinery_logout
+    redirect_to '/'
   end
 end

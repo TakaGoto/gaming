@@ -9,9 +9,9 @@ Gaming::Application.routes.draw do
 
   root :to => 'home#index'
 
-  match '/b', :to => redirect('/')
-
   match '/p/about' => 'home#about', :as => :about
+
+  match '/b' => 'home#refinery_logout'
 
   match '/auth/:provider/callback' => 'sessions#create'
   match '/auth/failure' => 'sessions#failure'

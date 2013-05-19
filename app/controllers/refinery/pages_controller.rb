@@ -8,8 +8,7 @@ module Refinery
 
     # This action is usually accessed with the root path, normally '/'
     def home
-      #render_with_templates?
-      redirect_to '/'
+      render_with_templates?
     end
 
     # This action can be accessed normally, or as nested pages.

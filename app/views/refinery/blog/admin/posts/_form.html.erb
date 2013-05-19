@@ -44,6 +44,18 @@
     <%= f.text_field :tag_list, :class => 'larger' -%>
   </div>
 
+  <div class='field'>
+    <span class="label_with_help">
+      <%= f.label :image_id -%>
+      <%= render :partial => "/refinery/admin/image_picker", :locals => {
+          :f => f,
+          :field => :image_id,
+          :image => f.object.image,
+          :toggle_image_display => false
+      } %>
+    </span>
+  </div>
+
   <div id='more_options_field'>
     <p>
       <%= link_to t('.advanced_options'), "#",
@@ -89,15 +101,6 @@
         <%= f.text_field :source_url_title, :class => "widest" %>
       </div>
 
-      <div class='field'>
-        <%= f.label :image_id -%>
-        <%= render :partial => "/refinery/admin/image_picker", :locals => {
-            :f => f,
-            :field => :image_id,
-            :image => f.object.image,
-            :toggle_image_display => false
-        } %>
-      </div>
 
       <div class='field'>
         <span class='label_with_help'>
