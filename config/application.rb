@@ -37,5 +37,7 @@ module Gaming
     config.action_mailer.default_url_options = {
       :host => "gmail.com"
     }
+
+    config.assets.initialize_on_precompile = true
   end
 end
